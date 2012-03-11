@@ -1,0 +1,13 @@
+<!doctype html>
+<script src="jquery-min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+    chrome.tabs.onUpdated.addListener(function(params_tab_id, params_change_info, params_tab) {
+		if (params_change_info.url && params_change_info.url.indexOf('http://www.imdb.com') == 0) {
+			var newUrl = params_change_info.url.replace(/www.imdb.com/i, "pro.imdb.com");
+	    	chrome.tabs.update(params_tab_id, {"url":newUrl});
+		}
+    });
+ });
+
+</script>

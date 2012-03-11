@@ -1,0 +1,12 @@
+{
+  "name": "IMDB Pro Redirect",
+  "version": "1.0",
+  "description": "Redirect regular IMDB links to IMDB Pro.  For IMDB Pro subscribers.",
+  "browser_action": {
+    "default_icon": "logo.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "background_page": "background.html"
+}
